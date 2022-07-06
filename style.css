@@ -146,9 +146,17 @@ main section {
 }
 
 @media (max-width: 768px) {
+    body{
+        height: 150vh;
+    }
+    .left{
+        height: 60%;
+        width: 40%;
+    }
     .responsive-container {
         flex-direction: column;
         align-items: center;
+        height: 90%;
     }
     .flex-container {
         width: 350px;
@@ -160,15 +168,29 @@ main section {
         text-align: center;
     }
     .flex-container-2 {
-        width: 22rem;
+        width: 90%;
     }
     .the-list {
-        height: 17rem;
+        /* height: 17rem; */
+        width: 90%;
     }
     main {
         height: 100%;
     }
     .filters {
         padding-top: 2rem;
+    }
+}
+@media(max-width : 500px){
+    .flex-container-2 {
+        width: 22rem;
+    }
+    .the-list {
+        width: 80%;
+    }
+}
+@media(max-width : 400px){
+    main{
+        width: 90%;
     }
 }
