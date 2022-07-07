@@ -22,13 +22,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </p>
                 <form class="flex" action="" id="usrform">
-                    <input type="text" name="usrname" placeholder="Votre tâche">
+                    <input type="text" name="usrname" placeholder="Votre tâche" required>
                     <div class="flex">
-                        <button id="add">Ajouter</button>
-                        <button>Aleatoire</button>
+                        <button type="submit" id="add">Ajouter</button>
+                        <button type="button">Aleatoire</button>
                     </div>
                 </form>
-
             </article>
         </section>
 
@@ -38,16 +37,24 @@
             <article class="the-list">
                 <nav class="filters flex">
                     <button id="all">ALL</button>
-                    <button id="toDo">To Do</button>
+                    <button id="todo">To Do</button>
                     <button id="doing">Doing</button>
                     <button id="done">Done</button>
                 </nav>
 
                 <!-- ul de la to do list checkbox -->
-                <ul class="task-box"></ul>
+                <ul id="taskbox" class="task-box">
+                    <!-- <li class="task"><button class="check"></button>
+                        <button class="doing"></button>
+                        <p>hello</p>
+                        <button class="close"></button>
+                        <button class="modify"></button>
+                    </li> -->
+                </ul>
             </article>
         </section>
     </main>
+    <div class="bg-ball"></div>
     <script src="index.js"></script>
 </body>
 

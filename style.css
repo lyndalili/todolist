@@ -28,6 +28,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .flex {
@@ -143,11 +144,71 @@ main section {
 .task-box {
     width: 100%;
     height: 85%;
+    overflow-y: scroll;
+}
+
+.task-box::-webkit-scrollbar{
+    display: none;
+}
+
+.task{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Sarala', sans-serif;
+}
+
+.task p {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.task button{
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.check{
+    background: green;
+}
+.doing{
+    background: orange;
+}
+.close{
+    background: red;
+}
+.modify{
+    background: yellow;
+}
+
+/* Déco */
+
+.bg-ball{
+width: 500px;
+height: 500px;
+border-radius: 600px;
+position: absolute;
+bottom: -250px;
+right: -200px;
+z-index: -2;
+background: #FDFF8B;
+filter: blur(200px);
 }
 
 @media (max-width: 768px) {
     body{
         height: 150vh;
+        overflow: auto;
+    }
+    .bg-ball{
+        display: none;
     }
     .left{
         height: 60%;
@@ -184,6 +245,7 @@ main section {
 @media(max-width : 500px){
     .flex-container-2 {
         width: 22rem;
+        height: 60%;
     }
     .the-list {
         width: 80%;
