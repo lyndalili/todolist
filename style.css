@@ -124,7 +124,7 @@ main section {
     background: #FFFFFF;
     width: 65%;
     height: 85%;
-    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.46);
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
 .filters {
@@ -139,6 +139,7 @@ main section {
     height: 35px;
     background: #FFFFFF;
     border: #262525 2px solid;
+    cursor: pointer;
 }
 
 .task-box {
