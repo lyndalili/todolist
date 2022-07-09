@@ -73,6 +73,7 @@ main section {
     width: 75%;
     font-family: 'Red Hat Text', sans-serif;
     font-size: 12px;
+    text-align: center;
 }
 
 .container form {
