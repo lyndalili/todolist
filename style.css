@@ -176,6 +176,11 @@ main section {
     cursor: pointer;
 }
 
+.checkinput{
+    color: #C5C5C5;
+    text-decoration: line-through;
+}
+
 .check{
     background: green;
 }
@@ -231,6 +236,7 @@ filter: blur(200px);
     }
     .flex-container-2 {
         width: 90%;
+        height: 60%;
     }
     .the-list {
         /* height: 17rem; */

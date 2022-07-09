@@ -19,7 +19,7 @@
         <section class="flex left">
             <article class="container flex flex-container">
                 <h1>“TO DO LIST”</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Ecrivez une nouvelle tache ci-dessous.</p>
                 </p>
                 <form class="flex" action="" id="usrform">
                     <input type="text" name="usrname" placeholder="Votre tâche" required>
@@ -37,9 +37,9 @@
             <article class="the-list">
                 <nav class="filters flex">
                     <button id="all">ALL</button>
-                    <button id="todo">To Do</button>
-                    <button id="doing">Doing</button>
-                    <button id="done">Done</button>
+                    <button id="todo" onclick="toDoList()">To Do</button>
+                    <button id="doing" onclick="doingList()">Doing</button>
+                    <button id="done" onclick="doneList()">Done</button>
                 </nav>
 
                 <!-- ul de la to do list checkbox -->
