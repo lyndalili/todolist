@@ -27,10 +27,10 @@ const onTaskSubmit = (e) => {
         taskBox.innerHTML = ""
         taskAll.forEach((task, i) =>{
                 taskBox.innerHTML += `
-                <li class="task ${i}"><button class="check ${i}" id="check-${taskAll.length-1}" onClick="changeStatusCheck(${taskAll.length-1})"></button>
+                <li class="task ${i}" id="li-${i}"><button class="check ${i}" id="check-${taskAll.length-1}" onClick="changeStatusCheck(${taskAll.length-1})"></button>
                 <button onClick="changeStatusDoing(${taskAll.length-1})" class="doing ${i}"></button>
                 <p id="taskname-${i}">${task.name}</p>
-                <button class="close"></button>
+                <button class="close ${i}" onClick="deleteTask(${taskAll.length-1})"></button>
                 <button class="modify"></button>
                 </li>
                 `
@@ -50,6 +50,13 @@ const changeStatusCheck = (id) => {
         let taskName1 = document.getElementById(`taskname-${taskId}`)
         taskName1.classList.add('checkinput')
         console.log(taskAll[taskId])
+}
+const deleteTask = (id) => {
+        let classNameID = event.target.className
+        const arrayId = classNameID.split(' ')
+        const taskId = arrayId[1]
+        let taskBox1 = document.getElementById(`li-${taskId}`)
+        taskBox1.classList.add('delet')
 }
 const changeStatusDoing = (id) => {
         let classNameID = event.target.className

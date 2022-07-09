@@ -181,6 +181,10 @@ main section {
     text-decoration: line-through;
 }
 
+.delet{
+    display: none;
+}
+
 .check{
     background: green;
 }
