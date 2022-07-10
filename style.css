@@ -268,3 +268,33 @@ filter: blur(200px);
         width: 90%;
     }
 }
+
+
+/* const randomTaskNames = [
+    "Vérifier les sorties sur l'app nike",
+    "Prendre une douche",
+    "Acheter une chemeise", 
+    "Trouver une tâche à faire",
+    "Virer le clodo mort de la cave", 
+    "Changer de pc",
+    "Faire la cuisine",
+    "Trouver du fric",
+    "Aller à miami",
+    "Acheter une voiture",
+    ]
+    const min = 0
+    const max = randomTaskNames.length - 1
+    const random = Math.floor(Math.random() * max) + min
+    const randomTasksArray = {name : randomTaskNames[random], status : "to do"}
+    const randomName = randomTasksArray.name
+    taskBox.innerHTML = ""
+    taskAll.forEach((task, i) =>{
+            taskBox.innerHTML += `
+            <li class="task ${i}" id="li-${i}"><button class="check ${i}" id="check-${taskAll.length-1}" onClick="changeStatusCheck(${taskAll.length-1})"></button>
+            <button onClick="changeStatusDoing(${taskAll.length-1})" class="doing ${i}"></button>
+            <p id="taskname-${i}">${randomTasksArray.name}</p>
+            <button class="close ${i}" onClick="deleteTask(${taskAll.length-1})"></button>
+            <button class="modify"></button>
+            </li>
+            `
+    }) */

@@ -115,27 +115,28 @@ const doingFilter = taskAll.filter((task, i) => {
 }
 
 const randomTask = () => {
-        const randomTasksArray = [
-                {name : "Vérifier les sorties sur l'app nike", status : "to do"},
-                {name : "Prendre une douche", status : "to do"},
-                {name : "Acheter une chemeise", status : "to do"},
-                {name : "Trouver une tâche à faire", status : "to do"},
-                {name : "Virer le clodo mort de la cave", status : "to do"},
-                {name : "Changer de pc", status : "to do"},
-                {name : "Faire la cuisine", status : "to do"},
-                {name : "Trouver du fric", status : "to do"},
-                {name : "Aller à miami", status : "to do"},
-                {name : "Acheter une voiture", status : "to do"},
+        const randomTaskNames = [
+        "Vérifier les sorties sur l'app nike",
+        "Prendre une douche",
+        "Acheter une chemeise", 
+        "Trouver une tâche à faire",
+        "Virer le clodo mort de la cave", 
+        "Changer de pc",
+        "Faire la cuisine",
+        "Trouver du fric",
+        "Aller à miami",
+        "Acheter une voiture",
         ]
         const min = 0
-        const max = randomTasksArray.length - 1
+        const max = randomTaskNames.length - 1
         const random = Math.floor(Math.random() * max) + min
-        const randomTaskSelected = randomTasksArray[random]
-        const randomName = randomTasksArray[random].name
-        taskAll.push(randomTaskSelected)
-
+        const randomTasksArray = {name : randomTaskNames[random], status : "to do"}
+        const randomName = randomTasksArray.name
+        taskAll.push(randomTasksArray)
         taskBox.innerHTML = ""
+
         taskAll.forEach((task, i) =>{
+
                 taskBox.innerHTML += `
                 <li class="task ${i}" id="li-${i}"><button class="check ${i}" id="check-${taskAll.length-1}" onClick="changeStatusCheck(${taskAll.length-1})"></button>
                 <button onClick="changeStatusDoing(${taskAll.length-1})" class="doing ${i}"></button>
@@ -145,8 +146,6 @@ const randomTask = () => {
                 </li>
                 `
         })
-
-        console.log(randomName)
 }
 
 form.addEventListener('submit', onTaskSubmit);
